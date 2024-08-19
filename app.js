@@ -44,6 +44,7 @@ app.use('/expense', expenseRoutes);
 app.use('/purchase', purchaseRoutes);
 app.use('/premium', premiumRoutes);
 app.use('/password', passwordRoutes);
+app.use('/', (req, res, next) => res.status(200).send("<h1>The backend is working...</h1>"))
 
 User.hasMany(Expense);
 Expense.belongsTo(User);
