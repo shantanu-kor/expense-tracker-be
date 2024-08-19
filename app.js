@@ -2,13 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 // const compression = require('compression');
 const morgan = require('morgan');
-require('dotenv').config();
 
 const userRoutes = require('./routes/user');
 const expenseRoutes = require('./routes/expense');
